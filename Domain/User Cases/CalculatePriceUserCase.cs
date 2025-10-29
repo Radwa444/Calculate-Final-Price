@@ -74,9 +74,9 @@ namespace calculate_final_price.Domain.User_Cases
         }
       private void isValidateDetails(Details details)
         {
-            if(!Validate.IsValidPercentage(details.TaxPercentage)&&
-                !Validate.IsValidPercentage(details.SecondDiscountPercentage) &&
-                ! Validate.IsValidPercentage(details.FirstDiscountPercentage) &&
+            if(!Validate.IsValidPercentage(details.TaxPercentage)||
+                !Validate.IsValidPercentage(details.SecondDiscountPercentage) ||
+                ! Validate.IsValidPercentage(details.FirstDiscountPercentage) ||
                 !Validate.IsValidPercentage(details.ThirdDiscountPercentage)) 
             {
                
