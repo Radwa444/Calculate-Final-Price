@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:calculate_final_price.Resources.Strings"
+             x:Class="calculate_final_price.MainPage">
+   
+
+    <ScrollView>
+        <Grid   RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="16">
+            <Grid Grid.Row="0">
+                
+            </Grid>
+            <Grid Grid.Row="1" ColumnDefinitions="Auto,Auto" HorizontalOptions="Center" ColumnSpacing="32"  >
+                <Grid Grid.Column="0" RowDefinitions="Auto,*"  >
+                    <Label  Grid.Row="0" Text="{x:Static resources:Resource_En.Price}" FontSize="12"/>
+                    <Border  Grid.Row="1" Style="{StaticResource StyleBorder}"  >
+                        <Entry/>
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Column="1" RowDefinitions="Auto,*"  >
+                    <Label  Grid.Row="0" Text="{x:Static resources:Resource_En.Quantity}" Style="{StaticResource StyleText}"/>
+                    <Border  Grid.Row="1" Style="{StaticResource StyleBorder}" >
+                        <Entry/>
+                    </Border>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="2" ColumnDefinitions="Auto,Auto" ColumnSpacing="32" HorizontalOptions="Center" >
+                <RadioButton Grid.Column="0" Content="{x:Static resources:Resource_En.Discount_first}" GroupName="GroupOne" IsChecked="True"/>
+                <RadioButton Grid.Column="1" Content="{x:Static resources:Resource_En.Tax_first}"/>
+            </Grid>
+            <Grid Grid.Row="3" ColumnDefinitions="Auto,Auto" HorizontalOptions="Center" ColumnSpacing="32" >
+                <Grid Grid.Column="0" RowDefinitions="Auto,*"  >
+                    <Label  Grid.Row="0" Text="{x:Static resources:Resource_En.Frist_Discount}"  Style="{StaticResource StyleText}"/>
+                    <Border  Grid.Row="1" Style="{StaticResource StyleBorder}"  >
+                        <Entry/>
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Column="1" RowDefinitions="Auto,*"  >
+                    <Label  Grid.Row="0" Text="{x:Static resources:Resource_En.Result}"  Style="{StaticResource StyleText}"/>
+                    <Border  Grid.Row="1" Style="{StaticResource StyleBorder}" >
+                        <Entry/>
+                    </Border>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="4" ColumnDefinitions="Auto,Auto" HorizontalOptions="Center" ColumnSpacing="32" >
+                <Grid Grid.Column="0" RowDefinitions="Auto,*"  >
+                    <Label  Grid.Row="0" Text="{x:Static resources:Resource_En.Second_Discount}"  Style="{StaticResource StyleText}"/>
+                    <Border  Grid.Row="1" Style="{StaticResource StyleBorder}"  >
+                        <Entry/>
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Column="1" RowDefinitions="Auto,*"  >
+                    <Label  Grid.Row="0" Text="{x:Static resources:Resource_En.Result}"  Style="{StaticResource StyleText}"/>
+                    <Border  Grid.Row="1" Style="{StaticResource StyleBorder}"  >
+                        <Entry/>
+                    </Border>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="5" ColumnDefinitions="Auto,Auto" HorizontalOptions="Center" ColumnSpacing="32" >
+                <Grid Grid.Column="0" RowDefinitions="Auto,*"  >
+                    <Label  Grid.Row="0" Text="{x:Static resources:Resource_En.third_Discount}"  Style="{StaticResource StyleText}"/>
+                    <Border  Grid.Row="1" Style="{StaticResource StyleBorder}"  >
+                        <Entry/>
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Column="1" RowDefinitions="Auto,*"  >
+                    <Label  Grid.Row="0" Text="{x:Static resources:Resource_En.Result}"  Style="{StaticResource StyleText}"/>
+                    <Border  Grid.Row="1" Style="{StaticResource StyleBorder}"  >
+                        <Entry/>
+                    </Border>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="6" ColumnDefinitions="Auto,Auto" HorizontalOptions="Center" ColumnSpacing="32" >
+                <Grid Grid.Column="0" RowDefinitions="Auto,*"  >
+                    <Label  Grid.Row="0" Text="{x:Static resources:Resource_En.Tax}"  Style="{StaticResource StyleText}"/>
+                    <Border  Grid.Row="1" Style="{StaticResource StyleBorder}"  >
+                        <Entry/>
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Column="1" RowDefinitions="Auto,*"  >
+                    <Label  Grid.Row="0" Text="{x:Static resources:Resource_En.Result}"  Style="{StaticResource StyleText}"/>
+                    <Border  Grid.Row="1" Style="{StaticResource StyleBorder}"  >
+                        <Entry/>
+                    </Border>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="7" ColumnDefinitions="Auto,Auto" HorizontalOptions="Center" ColumnSpacing="32" >
+
+
+                <Label Grid.Row="0" Text="{x:Static resources:Resource_En.Total}" Style="{StaticResource StyleTotalText}"/>
+                <Border  Grid.Column="1" Style="{StaticResource StyleTotalBorder}"  >
+                    <Label Text="0.0"  HorizontalOptions="Center" Style="{StaticResource StyleTotalText}"/>
+                </Border>
+
+
+
+            </Grid>
+
+        </Grid>
+
+
+    </ScrollView>
+
+</ContentPage>

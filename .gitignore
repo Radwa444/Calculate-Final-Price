@@ -1,0 +1,24 @@
+## .NET MAUI ##
+bin/
+obj/
+*.userprefs
+*.user
+*.suo
+*.csproj.user
+
+## Visual Studio ##
+.vs/
+*.vscode
+
+## Build results ##
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
