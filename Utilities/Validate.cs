@@ -9,14 +9,16 @@ namespace calculate_final_price.Utilities
     public class Validate
     {
         public static bool IsValidPositiveNumber(double number )
-        { 
-            if(number>=0) 
-            {
-                return true;
-            }
-            return false;
+        {
+            return number >= 0;
 
         }
+        public static bool IsValidPercentage(double percentage)
+        {
+            return percentage >= 0 && percentage<=1;
+
+        }
+
 
     }
 }
