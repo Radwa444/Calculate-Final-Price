@@ -66,13 +66,9 @@
 
 	<ItemGroup>
 	  <Folder Include="Data\Data Source\" />
-	  <Folder Include="Data\Models\" />
 	  <Folder Include="Data\Repo Impl\" />
 	  <Folder Include="Domain\Entities\" />
 	  <Folder Include="Domain\Repo\" />
-	  <Folder Include="Domain\User Cases\" />
-	  <Folder Include="Presentation\ViewModels\" />
-	  <Folder Include="Presentation\Views\" />
 	</ItemGroup>
 
 	<ItemGroup>

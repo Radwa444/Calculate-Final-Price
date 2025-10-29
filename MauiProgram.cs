@@ -1,4 +1,6 @@
-﻿using CommunityToolkit.Maui;
+﻿using calculate_final_price.Domain.User_Cases;
+using calculate_final_price.Presentation.ViewModels;
+using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 
 namespace calculate_final_price
@@ -31,6 +33,7 @@ namespace calculate_final_price
         }
         private static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
         {
+            mauiAppBuilder.Services.AddTransient<CalculatePriceViewModel>();
             return mauiAppBuilder;
         }
         private static MauiAppBuilder RegisterServices(this MauiAppBuilder mauiAppBuilder)
@@ -39,11 +42,13 @@ namespace calculate_final_price
         }
         private static MauiAppBuilder RegisterPages(this MauiAppBuilder mauiAppBuilder)
         {
+            mauiAppBuilder.Services.AddTransient<MainPage>();
             return mauiAppBuilder;
         }
         
         private static MauiAppBuilder RegisterUserCases(this MauiAppBuilder mauiAppBuilder)
         {
+            mauiAppBuilder.Services.AddTransient<CalculatePriceUseCase >();
             return mauiAppBuilder;
         }
     }
