@@ -7,12 +7,24 @@
 
     <ScrollView>
         <Grid   RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="16">
-            <Grid Grid.Row="0">
+            <Grid Grid.Row="0" RowDefinitions="Auto">
+                <Border Grid.Row="1" Style="{StaticResource StyleTotalBorder}" Background="WhiteSmoke"  Stroke="WhiteSmoke" HorizontalOptions="End" Margin="16,0">
+                    <Grid RowDefinitions="Auto"  >
+                        <Picker x:Name="LanguagePicker" Title="Language" SelectedIndexChanged="LanguagePicker_SelectedIndexChanged" >
+                            <Picker.Items>
+                                <x:String>English</x:String>
+                                <x:String>العربية</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Grid>
+                   
+                </Border>
                 
+
             </Grid>
             <Grid Grid.Row="1" ColumnDefinitions="Auto,Auto" HorizontalOptions="Center" ColumnSpacing="32"  >
                 <Grid Grid.Column="0" RowDefinitions="Auto,*"  >
-                    <Label  Grid.Row="0" Text="{x:Static resources:Resource_En.Price}" FontSize="12"/>
+                    <Label  Grid.Row="0" Text="{x:Static resources:Resource.Price}" FontSize="12"/>
                     <Border  Grid.Row="1" Style="{StaticResource StyleBorder}"  >
                         <Grid RowDefinitions="Auto" VerticalOptions="Center"  >
                             <Entry  Text="{Binding Price}"  HorizontalOptions="Center" FontSize="18" />
@@ -22,7 +34,7 @@
                 </Grid>
 
                 <Grid Grid.Column="1" RowDefinitions="Auto,Auto"  >
-                    <Label  Grid.Row="0" Text="{x:Static resources:Resource_En.Quantity}" Style="{StaticResource StyleText}"/>
+                    <Label  Grid.Row="0" Text="{x:Static resources:Resource.Quantity}" Style="{StaticResource StyleText}"/>
                     <Border  Grid.Row="1" Style="{StaticResource StyleBorder}" >
                         <Grid RowDefinitions="Auto" VerticalOptions="Center"  >
                             <Entry  Text="{Binding  Quantity}"  HorizontalOptions="Center" FontSize="18" />
@@ -32,73 +44,92 @@
                 </Grid>
             </Grid>
             <Grid Grid.Row="2" ColumnDefinitions="Auto,Auto" ColumnSpacing="32" HorizontalOptions="Center" >
-                <RadioButton Grid.Column="0" Content="{x:Static resources:Resource_En.Discount_first}" GroupName="GroupOne" IsChecked="True"/>
-                <RadioButton Grid.Column="1" Content="{x:Static resources:Resource_En.Tax_first}"/>
+                <RadioButton Grid.Column="0" Content="{x:Static resources:Resource.DiscountFirst}" GroupName="GroupOne"  IsChecked="{Binding IsDiscountFirst}"/>
+                <RadioButton Grid.Column="1" Content="{x:Static resources:Resource.Tax_first}"  GroupName="GroupOne" IsChecked="{Binding IsTaxFirst}"/>
             </Grid>
             <Grid Grid.Row="3" ColumnDefinitions="Auto,Auto" HorizontalOptions="Center" ColumnSpacing="32" >
                 <Grid Grid.Column="0" RowDefinitions="Auto,*"  >
-                    <Label  Grid.Row="0" Text="{x:Static resources:Resource_En.Frist_Discount}"  Style="{StaticResource StyleText}"/>
+                    <Label  Grid.Row="0" Text="{x:Static resources:Resource.Frist_Discount}"  Style="{StaticResource StyleText}"/>
                     <Border  Grid.Row="1" Style="{StaticResource StyleBorder}"  >
-                        <Entry/>
+                        <Grid RowDefinitions="Auto"  VerticalOptions="Center" >
+                            <Entry Text="{Binding  FirstDiscountPercentage}"  HorizontalOptions="Center" FontSize="18" />
+                        </Grid>
+                        
                     </Border>
                 </Grid>
 
                 <Grid Grid.Column="1" RowDefinitions="Auto,*"  >
-                    <Label  Grid.Row="0" Text="{x:Static resources:Resource_En.Result}"  Style="{StaticResource StyleText}"/>
+                    
+                    <Label  Grid.Row="0" Text="{x:Static resources:Resource.Amount}"  Style="{StaticResource StyleText}"/>
                     <Border  Grid.Row="1" Style="{StaticResource StyleBorder}" >
-                        <Entry/>
+                        <Grid RowDefinitions="Auto"  VerticalOptions="Center" >
+                            <Entry Text="{Binding  FristDiscountAmount}"  HorizontalOptions="Center" FontSize="18" />
+                        </Grid>
+
                     </Border>
                 </Grid>
             </Grid>
             <Grid Grid.Row="4" ColumnDefinitions="Auto,Auto" HorizontalOptions="Center" ColumnSpacing="32" >
                 <Grid Grid.Column="0" RowDefinitions="Auto,*"  >
-                    <Label  Grid.Row="0" Text="{x:Static resources:Resource_En.Second_Discount}"  Style="{StaticResource StyleText}"/>
+                    <Label  Grid.Row="0" Text="{x:Static resources:Resource.Second_Discount}"  Style="{StaticResource StyleText}"/>
                     <Border  Grid.Row="1" Style="{StaticResource StyleBorder}"  >
-                        <Entry/>
+                        <Grid RowDefinitions="Auto"  VerticalOptions="Center" >
+                            <Entry Text="{Binding  SecondDiscountPercentage}"  HorizontalOptions="Center" FontSize="18" />
+                        </Grid>
                     </Border>
                 </Grid>
 
                 <Grid Grid.Column="1" RowDefinitions="Auto,*"  >
-                    <Label  Grid.Row="0" Text="{x:Static resources:Resource_En.Result}"  Style="{StaticResource StyleText}"/>
+                    <Label  Grid.Row="0" Text="{x:Static resources:Resource.Amount}"  Style="{StaticResource StyleText}"/>
                     <Border  Grid.Row="1" Style="{StaticResource StyleBorder}"  >
-                        <Entry/>
+                        <Grid RowDefinitions="Auto"  VerticalOptions="Center" >
+                            <Entry Text="{Binding  SecondDiscountAmount}"  HorizontalOptions="Center" FontSize="18" />
+                        </Grid>
                     </Border>
                 </Grid>
             </Grid>
             <Grid Grid.Row="5" ColumnDefinitions="Auto,Auto" HorizontalOptions="Center" ColumnSpacing="32" >
                 <Grid Grid.Column="0" RowDefinitions="Auto,*"  >
-                    <Label  Grid.Row="0" Text="{x:Static resources:Resource_En.third_Discount}"  Style="{StaticResource StyleText}"/>
+                    <Label  Grid.Row="0" Text="{x:Static resources:Resource.third_Discount}"  Style="{StaticResource StyleText}"/>
                     <Border  Grid.Row="1" Style="{StaticResource StyleBorder}"  >
-                        <Entry/>
+                        <Grid RowDefinitions="Auto"  VerticalOptions="Center" >
+                            <Entry Text="{Binding  ThirdDiscountPercentage}"  HorizontalOptions="Center" FontSize="18" />
+                        </Grid>
                     </Border>
                 </Grid>
 
                 <Grid Grid.Column="1" RowDefinitions="Auto,*"  >
-                    <Label  Grid.Row="0" Text="{x:Static resources:Resource_En.Result}"  Style="{StaticResource StyleText}"/>
+                    <Label  Grid.Row="0" Text="{x:Static resources:Resource.Amount}"  Style="{StaticResource StyleText}"/>
                     <Border  Grid.Row="1" Style="{StaticResource StyleBorder}"  >
-                        <Entry/>
+                        <Grid RowDefinitions="Auto"  VerticalOptions="Center" >
+                            <Entry Text="{Binding  ThirdDiscountAmount}"  HorizontalOptions="Center" FontSize="18" />
+                        </Grid>
                     </Border>
                 </Grid>
             </Grid>
             <Grid Grid.Row="6" ColumnDefinitions="Auto,Auto" HorizontalOptions="Center" ColumnSpacing="32" >
                 <Grid Grid.Column="0" RowDefinitions="Auto,*"  >
-                    <Label  Grid.Row="0" Text="{x:Static resources:Resource_En.Tax}"  Style="{StaticResource StyleText}"/>
+                    <Label  Grid.Row="0" Text="{x:Static resources:Resource.Tax}"  Style="{StaticResource StyleText}"/>
                     <Border  Grid.Row="1" Style="{StaticResource StyleBorder}"  >
-                        <Entry/>
+                        <Grid RowDefinitions="Auto"  VerticalOptions="Center" >
+                            <Entry Text="{Binding  TaxPercentage}"  HorizontalOptions="Center" FontSize="18" />
+                        </Grid>
                     </Border>
                 </Grid>
 
                 <Grid Grid.Column="1" RowDefinitions="Auto,*"  >
-                    <Label  Grid.Row="0" Text="{x:Static resources:Resource_En.Result}"  Style="{StaticResource StyleText}"/>
+                    <Label  Grid.Row="0" Text="{x:Static resources:Resource.Amount}"  Style="{StaticResource StyleText}"/>
                     <Border  Grid.Row="1" Style="{StaticResource StyleBorder}"  >
-                        <Entry/>
+                        <Grid RowDefinitions="Auto"  VerticalOptions="Center" >
+                            <Entry Text="{Binding  TaxAmount}"  HorizontalOptions="Center" FontSize="18" />
+                        </Grid>
                     </Border>
                 </Grid>
             </Grid>
             <Grid Grid.Row="7" ColumnDefinitions="Auto,Auto" HorizontalOptions="Center" ColumnSpacing="32" >
 
 
-                <Label Grid.Row="0" Text="{x:Static resources:Resource_En.Total}" Style="{StaticResource StyleTotalText}"/>
+                <Label Grid.Row="0" Text="{x:Static resources:Resource.Total}" Style="{StaticResource StyleTotalText}"/>
                 <Border  Grid.Column="1" Style="{StaticResource StyleTotalBorder}"  >
                     <Label Text="{Binding Total}"  HorizontalOptions="Center" Style="{StaticResource StyleTotalText}"/>
                 </Border>

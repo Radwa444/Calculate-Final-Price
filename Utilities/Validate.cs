@@ -15,7 +15,7 @@ namespace calculate_final_price.Utilities
         }
         public static bool IsValidPercentage(double percentage)
         {
-            return percentage >= 0 && percentage<=1;
+            return percentage/100 >= 0 && percentage/100<=1;
 
         }
 
