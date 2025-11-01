@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace calculate_final_price.Data.Models
+namespace calculate_final_price.Data.Models.PriceCalculation
 {
-   public class Details
+   public class PriceCalculationRequest
     {
         public double Price { get; set; }
         public double Quantity { get; set; }

@@ -22,24 +22,24 @@ namespace calculate_final_price.Resources.Strings {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Resource_En {
+    internal class Resource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resource_En() {
+        internal Resource() {
         }
         
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager {
+        internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("calculate_final_price.Resources.Strings.Resource_En", typeof(Resource_En).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("calculate_final_price.Resources.Strings.Resource", typeof(Resource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -51,7 +51,7 @@ namespace calculate_final_price.Resources.Strings {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture {
+        internal static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,18 +61,27 @@ namespace calculate_final_price.Resources.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Amount.
+        /// </summary>
+        internal static string Amount {
+            get {
+                return ResourceManager.GetString("Amount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Discount first.
         /// </summary>
-        public static string Discount_first {
+        internal static string DiscountFirst {
             get {
-                return ResourceManager.GetString("Discount_first", resourceCulture);
+                return ResourceManager.GetString("DiscountFirst", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Frist Discount.
         /// </summary>
-        public static string Frist_Discount {
+        internal static string Frist_Discount {
             get {
                 return ResourceManager.GetString("Frist_Discount", resourceCulture);
             }
@@ -81,7 +90,7 @@ namespace calculate_final_price.Resources.Strings {
         /// <summary>
         ///   Looks up a localized string similar to Price.
         /// </summary>
-        public static string Price {
+        internal static string Price {
             get {
                 return ResourceManager.GetString("Price", resourceCulture);
             }
@@ -90,25 +99,16 @@ namespace calculate_final_price.Resources.Strings {
         /// <summary>
         ///   Looks up a localized string similar to Quantity.
         /// </summary>
-        public static string Quantity {
+        internal static string Quantity {
             get {
                 return ResourceManager.GetString("Quantity", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Result.
-        /// </summary>
-        public static string Result {
-            get {
-                return ResourceManager.GetString("Result", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Second Discount.
         /// </summary>
-        public static string Second_Discount {
+        internal static string Second_Discount {
             get {
                 return ResourceManager.GetString("Second_Discount", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace calculate_final_price.Resources.Strings {
         /// <summary>
         ///   Looks up a localized string similar to Tax.
         /// </summary>
-        public static string Tax {
+        internal static string Tax {
             get {
                 return ResourceManager.GetString("Tax", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace calculate_final_price.Resources.Strings {
         /// <summary>
         ///   Looks up a localized string similar to Tax first.
         /// </summary>
-        public static string Tax_first {
+        internal static string Tax_first {
             get {
                 return ResourceManager.GetString("Tax_first", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace calculate_final_price.Resources.Strings {
         /// <summary>
         ///   Looks up a localized string similar to Third Discount.
         /// </summary>
-        public static string third_Discount {
+        internal static string third_Discount {
             get {
                 return ResourceManager.GetString("third_Discount", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace calculate_final_price.Resources.Strings {
         /// <summary>
         ///   Looks up a localized string similar to Total.
         /// </summary>
-        public static string Total {
+        internal static string Total {
             get {
                 return ResourceManager.GetString("Total", resourceCulture);
             }
