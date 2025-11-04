@@ -44,8 +44,8 @@
                 </Grid>
             </Grid>
             <Grid Grid.Row="2" ColumnDefinitions="Auto,Auto" ColumnSpacing="32" HorizontalOptions="Center" >
-                <RadioButton Grid.Column="0" Content="{x:Static resources:Resource.DiscountFirst}" GroupName="GroupOne"  IsChecked="{Binding IsDiscountFirst}"/>
-                <RadioButton Grid.Column="1" Content="{x:Static resources:Resource.Tax_first}"  GroupName="GroupOne" IsChecked="{Binding IsTaxFirst}"/>
+                <RadioButton Grid.Column="0" Content="{x:Static resources:Resource.DiscountFirst}" GroupName="GroupOne" IsChecked="{Binding IsDiscountFirst}"/>
+                <RadioButton Grid.Column="1" Content="{x:Static resources:Resource.Tax_first}"  GroupName="GroupOne" IsChecked="{Binding  IsTaxFirst}"/>
             </Grid>
             <Grid Grid.Row="3" ColumnDefinitions="Auto,Auto" HorizontalOptions="Center" ColumnSpacing="32" >
                 <Grid Grid.Column="0" RowDefinitions="Auto,*"  >
